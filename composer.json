@@ -1,15 +1,14 @@
 {
-  "name": "mxmln/kirby-sidenotes",
+  "name": "mxmlnbln/kirby-sidenotes",
   "description": "Tufte-style sidenotes for Kirby — footnotes in the page margin, as a KirbyText tag",
   "type": "kirby-plugin",
   "license": "MIT",
   "version": "1.0.0",
   "keywords": ["kirby", "kirby-cms", "kirby-plugin", "footnotes", "sidenotes", "tufte"],
-  "homepage": "https://github.com/mxmln/kirby-sidenotes",
+  "homepage": "https://github.com/mxmlnbln/kirby-sidenotes",
   "authors": [
     {
-      "name": "mxmln",
-      "email": "claude@mxmln.org"
+      "name": "mxmlnbln"
     }
   ],
   "require": {
