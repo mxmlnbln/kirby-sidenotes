@@ -13,13 +13,13 @@
  *
  * `(sidenote: …)` works as an alias for `(fn: …)`.
  *
- * @author  mxmln
+ * @author  mxmlnbln
  * @license MIT
- * @link    https://github.com/mxmln/kirby-sidenotes
+ * @link    https://github.com/mxmlnbln/kirby-sidenotes
  */
 
-if (function_exists('mxmln_sidenote_html') === false) {
-    function mxmln_sidenote_html(Kirby\Text\KirbyTag $tag): string
+if (function_exists('mxmlnbln_sidenote_html') === false) {
+    function mxmlnbln_sidenote_html(Kirby\Text\KirbyTag $tag): string
     {
         static $counter = 0;
         $n = ++$counter;
@@ -43,13 +43,13 @@ if (function_exists('mxmln_sidenote_html') === false) {
     }
 }
 
-Kirby::plugin('mxmln/sidenotes', [
+Kirby::plugin('mxmlnbln/sidenotes', [
     'tags' => [
         'fn' => [
-            'html' => fn ($tag) => mxmln_sidenote_html($tag),
+            'html' => fn ($tag) => mxmlnbln_sidenote_html($tag),
         ],
         'sidenote' => [
-            'html' => fn ($tag) => mxmln_sidenote_html($tag),
+            'html' => fn ($tag) => mxmlnbln_sidenote_html($tag),
         ],
     ],
 ]);
