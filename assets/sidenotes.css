@@ -1,0 +1,71 @@
+/**
+ * Kirby Sidenotes — default styles
+ *
+ * Theme via CSS custom properties (set them on your prose container or :root):
+ *
+ *   --sidenote-accent      color of numbers, rules and link underlines (default: #b3261e)
+ *   --sidenote-color       text color of the note (default: 60% of currentColor)
+ *   --sidenote-font-size   (default: 0.78rem)
+ *   --sidenote-width       width of the margin note column (default: 13rem)
+ *   --sidenote-gap         gap between text column and notes (default: 3rem)
+ *
+ * The margin layout kicks in at 1280px. Your text column needs at least
+ * (--sidenote-width + --sidenote-gap) of free space to its right.
+ */
+
+.sidenote-ref {
+  font-size: 0.65em;
+  line-height: 0;
+}
+
+.sidenote-ref a {
+  color: var(--sidenote-accent, #b3261e);
+  text-decoration: none;
+}
+
+/* Small screens: note becomes an indented block in the text flow */
+.sidenote {
+  display: block;
+  margin: 1.2em 0;
+  padding: 0.1em 0 0.1em 0.9em;
+  border-left: 2px solid var(--sidenote-accent, #b3261e);
+  font-size: var(--sidenote-font-size, 0.78rem);
+  font-style: normal;
+  line-height: 1.55;
+  text-align: left;
+  hyphens: none;
+  color: var(--sidenote-color, color-mix(in srgb, currentColor 60%, transparent));
+}
+
+.sidenote-number {
+  font-size: 0.85em;
+}
+
+.sidenote-number,
+.sidenote-number:hover {
+  color: var(--sidenote-accent, #b3261e);
+  text-decoration: none;
+}
+
+.sidenote a:not(.sidenote-number) {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: var(--sidenote-accent, #b3261e);
+}
+
+.sidenote a:not(.sidenote-number):hover {
+  color: var(--sidenote-accent, #b3261e);
+}
+
+/* Wide screens: Tufte margin notes */
+@media (min-width: 1280px) {
+  .sidenote {
+    float: right;
+    clear: right;
+    width: var(--sidenote-width, 13rem);
+    margin: 0.15rem calc(-1 * (var(--sidenote-width, 13rem) + var(--sidenote-gap, 3rem))) 0.8em 0;
+    padding: 0;
+    border-left: none;
+  }
+}
