@@ -11,7 +11,7 @@ text flow. No JavaScript, no build step.
 **Composer (recommended)**
 
 ```bash
-composer require mxmln/kirby-sidenotes
+composer require mxmlnbln/kirby-sidenotes
 ```
 
 **Manual**
