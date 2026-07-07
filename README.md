@@ -42,7 +42,7 @@ Include the default stylesheet in your template — Kirby serves plugin assets
 automatically:
 
 ```php
-<?= css('media/plugins/mxmln/sidenotes/sidenotes.css') ?>
+<?= css('media/plugins/mxmlnbln/sidenotes/sidenotes.css') ?>
 ```
 
 Then theme it with CSS custom properties on your prose container (or `:root`):
